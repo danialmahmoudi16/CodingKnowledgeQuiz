@@ -5,10 +5,12 @@ var startquizbtn = document.getElementById("startquizbtn");
 var QAbody = document.getElementById("q&a");
 var quiztimer = document.getElementById("timer");
 var questionEl = document.getElementById("question");
-var choice1 = document.getElementById("1");
-var choice2 = document.getElementById("2");
-var choice3 = document.getElementById("3");
-var choice4 = document.getElementById("4");
+var quizoverEl = document.getElementById("Quizover");
+
+var select1 = document.getElementById("1");
+var select2 = document.getElementById("2");
+var select3 = document.getElementById("3");
+var select4 = document.getElementById("4");
 var resultEl = document.getElementById("result");
 var quizover = document.getElementById("Quizover");
 var finalscoreEl = document.getElementById("finalscore");
@@ -52,4 +54,17 @@ var submitscorebtn = document.getElementById("submitscore");
     choice4: "console.log"}   
 ]
 
+var QI = 0;
 
+function CreateQuizQuestion(){
+        quizover.style.display = "none";
+
+        var currentquestion = QuestionsandAnswers[QI];
+        questionEl.innerHTML = currentquestion.question
+        select1.innerHTML = currentquestion.choice1;
+        select2.innerHTML = currentquestion.choice2;
+        select3.innerHTML = currentquestion.choice3;
+        select4.innerHTML = currentquestion.choice4;
+
+
+}
